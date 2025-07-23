@@ -6,6 +6,8 @@
 
 :root {
   --border-radius: 5px;
+  --bigger-paragraph: 16px;
+  --smaller-paragraph: 12px;
 }
 
 body {
@@ -55,7 +57,7 @@ form > p {
 }
 
 .inputs-wrapper > input::placeholder {
-  font-size: 16px;
+  font-size: var(--bigger-paragraph);
   color: rgb(169, 169, 169);
 }
 
@@ -74,12 +76,7 @@ form > p {
 }
 
 .radio-content > label {
-  font-size: 16px;
   font-weight: bold;
-}
-
-.radio-text {
-  font-size: 13px;
 }
 
 .checkbox-wrapper {
@@ -87,12 +84,13 @@ form > p {
   display: flex;
   padding: 5px 15px;
   gap: 10px;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
-.checkbox-wrapper > label {
-  font-size: 13px;
+.checkbox-wrapper > label,
+.radio-text {
+  font-size: var(--smaller-paragraph);
   line-height: 1;
   letter-spacing: 0.6px;
 }
@@ -111,6 +109,6 @@ button {
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
-  font-size: 16px;
+  font-size: var(--bigger-paragraph);
   font-weight: bold;
 }
